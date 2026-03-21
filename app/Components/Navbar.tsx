@@ -17,7 +17,7 @@ function Navbar() {
             <Link href="/categories">Categories</Link>
           </li>
           <li className="flex items-center gap-2">
-            <Link href="/cart">Cart</Link>
+            <Link href="/carts">Cart</Link>
             <span className="w-5 h-5 rounded-full bg-bg-page text-text-primary text-center text-sm">
               3
             </span>
