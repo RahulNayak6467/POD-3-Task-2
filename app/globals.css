@@ -36,7 +36,7 @@
   --color-accent: #e24b4a;
   --color-accent-hover: #c93d3c;
 }
-
+/*
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
@@ -148,15 +148,15 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
-@layer base {
+*/
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
-  }
-  /* html { */
-  /* @apply font-sans; */
-  /* } */
-}
+  } */
+/* html { */
+/* @apply font-sans; */
+/* } */
+/* } */

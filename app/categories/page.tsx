@@ -1,5 +1,5 @@
 "use client";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CategoriesRow from "../Components/CategoryRow";
 import ProductCardSkeleton from "../Components/Loader";
 import ProductCard from "../Components/ProductCard";

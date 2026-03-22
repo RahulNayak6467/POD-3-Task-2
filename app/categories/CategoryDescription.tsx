@@ -13,7 +13,7 @@ function CategoryDescription() {
       ? data?.products
       : data?.products.filter((el) => el.category === category);
   return (
-    <section className=" bg-bg-section">
+    <section className=" bg-bg-section ">
       <div className="pt-10 pb-10 pl-20 flex  justify-around items-center">
         <div className="flex flex-col gap-2">
           <h1 className="text-5xl text-text-primary">Shop the latest trends</h1>

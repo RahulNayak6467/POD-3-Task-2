@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useCategory } from "../Context/CategoryContext";
 import { useCart } from "../Context/CartsContext";
 
 function CartItemsList() {
