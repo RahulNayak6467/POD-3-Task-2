@@ -1,3 +1,4 @@
+"use client";
 import { createContext, useContext, useState } from "react";
 import { CartItem } from "../types";
 
@@ -12,71 +13,7 @@ export interface cartValueProps {
   adjust: (id: number, delta: number) => void;
 }
 
-const dummyData: CartItem[] = [
-  {
-    id: 1,
-    name: "Classic White Tee",
-    meta: "Size: M · White",
-    price: 29.99,
-    qty: 1,
-  },
-  {
-    id: 2,
-    name: "Slim Fit Chinos",
-    meta: "Size: 32×30 · Black",
-    price: 49.99,
-    qty: 2,
-  },
-  {
-    id: 3,
-    name: "Leather Belt",
-    meta: "Size: 34 · Black",
-    price: 24.99,
-    qty: 1,
-  },
-  {
-    id: 4,
-    name: "Classic White Tee",
-    meta: "Size: M · White",
-    price: 29.99,
-    qty: 1,
-  },
-  {
-    id: 5,
-    name: "Slim Fit Chinos",
-    meta: "Size: 32×30 · Black",
-    price: 49.99,
-    qty: 2,
-  },
-  {
-    id: 6,
-    name: "Leather Belt",
-    meta: "Size: 34 · Black",
-    price: 24.99,
-    qty: 1,
-  },
-  {
-    id: 7,
-    name: "Classic White Tee",
-    meta: "Size: M · White",
-    price: 29.99,
-    qty: 1,
-  },
-  {
-    id: 8,
-    name: "Slim Fit Chinos",
-    meta: "Size: 32×30 · Black",
-    price: 49.99,
-    qty: 2,
-  },
-  {
-    id: 9,
-    name: "Leather Belt",
-    meta: "Size: 34 · Black",
-    price: 24.99,
-    qty: 1,
-  },
-];
+// const dummyData: CartItem[] = [];
 
 const CartsContext = createContext<cartValueProps | null>(null);
 
@@ -91,7 +28,7 @@ export const useCart = () => {
 };
 
 function CartsContextProvider({ children }: childrenProps) {
-  const [carts, setCarts] = useState<CartItem[]>(dummyData);
+  const [carts, setCarts] = useState<CartItem[]>([]);
 
   const handleCarts = (cart: CartItem) => {
     setCarts((prev) => [...prev, cart]);

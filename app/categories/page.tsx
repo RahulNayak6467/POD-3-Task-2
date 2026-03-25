@@ -7,6 +7,7 @@ import Toolbar from "../Components/ToolBar";
 import { useCategory } from "../Context/CategoryContext";
 import CategoryDescription from "./CategoryDescription";
 import PaginationProducts from "../Components/Pagination";
+import CartsContextProvider from "../Context/CartsContext";
 
 const CategoriesArray = [
   "smartphones",

@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Providers from "./Components/Providers";
 import CategoryContextProvider from "./Context/CategoryContext";
+import CartsContextProvider from "./Context/CartsContext";
 // import CategoryContextProvider from "./Context/CategoryContext";
 
 const geistSans = Geist({
@@ -34,8 +35,10 @@ export default function RootLayout({
       >
         <Providers>
           <CategoryContextProvider>
-            <Navbar />
-            {children}
+            <CartsContextProvider>
+              <Navbar />
+              {children}
+            </CartsContextProvider>
             <Footer />
           </CategoryContextProvider>
         </Providers>

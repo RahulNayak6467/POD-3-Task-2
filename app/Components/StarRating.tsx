@@ -14,13 +14,6 @@ function StarRating({ rating, price }: StarRatingProp) {
         </span>
         <span className="text-md font-medium ">${price}</span>
       </div>
-
-      {/* right bottom — price + button */}
-      <div className="flex items-center gap-2">
-        <button className="bg-bg-navbar text-white text-sm px-6 py-2 rounded-md cursor-pointer hover:opacity-80">
-          Add to cart
-        </button>
-      </div>
     </div>
   );
 }

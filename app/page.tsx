@@ -30,13 +30,7 @@ export default function Home() {
       <Hero />
       <div className="mt-6">
         <CategoriesRow
-          category={[
-            "smartphones",
-            "laptops",
-            "beauty",
-            "fragrance",
-            "furniture",
-          ]}
+          category={["smartphones", "laptops", "beauty", "furniture"]}
         />
       </div>
 
@@ -63,10 +57,10 @@ export default function Home() {
         <div className="grid grid-cols-4">
           {data?.products.map((product) => (
             <ProductCard
-              key={product.id}
-              id={product.id}
-              title={product.title}
-              thumbnail={product.thumbnail}
+            key={product.id}
+            id={product.id}
+            title={product.title}
+            thumbnail={product.thumbnail}
               rating={product.id}
               description={product.description}
               category={product.category}
@@ -76,7 +70,7 @@ export default function Home() {
         </div>
       ) : (
         <ProductCardSkeleton />
-      )} */}
+        )} */}
     </div>
   );
 }

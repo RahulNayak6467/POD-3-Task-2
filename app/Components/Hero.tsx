@@ -17,15 +17,9 @@ function Hero() {
         <div className="flex gap-4 mt-8">
           <Link
             href="/categories"
-            className="text-text-primary bg-bg-page px-6 py-3 font-black cursor-pointer rounded-2xl hover:text-text-inverse hover:bg-bg-navbar transition-all"
-          >
-            Shop Now
-          </Link>
-          <Link
-            href="/categories"
             className="text-text-inverse bg-bg-navbar border border-border-dark px-6 py-3 rounded-2xl cursor-pointer  hover:text-text-primary hover:bg-bg-page transition-all"
           >
-            BrowseCategories
+            Shop Now
           </Link>
         </div>
       </div>

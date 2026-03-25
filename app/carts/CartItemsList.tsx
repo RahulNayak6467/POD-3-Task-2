@@ -3,7 +3,10 @@ import { useCart } from "../Context/CartsContext";
 function CartItemsList() {
   const { carts, removeFromCarts, adjust } = useCart();
 
+  console.log(carts);
   const totalItems = carts.reduce((s, i) => s + i.qty, 0);
+
+  console.log(totalItems);
 
   return (
     <div className="m-6 bg-white border border-border-medium  p-6 w-[60%] max-h-[520px] overflow-y-scroll">
@@ -46,7 +49,9 @@ function CartItemsList() {
                   {item.name}
                 </p>
               </div>
-              <p className="text-xs text-[#888780] mb-2.5">{item.meta}</p>
+              <p className="text-xs text-[#888780] mb-2.5 line-clamp-1">
+                {item.meta}
+              </p>
 
               {/* Qty controls */}
               <div className="flex items-center w-fit border border-[#D3D1C7] rounded-lg overflow-hidden">

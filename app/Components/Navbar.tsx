@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useCart } from "../Context/CartsContext";
 
 function Navbar() {
+  const { carts } = useCart();
+  const totlaItems = carts.reduce((acc, item) => acc + item.qty, 0);
   return (
     <header className="bg-bg-navbar p-6 ">
       <nav className="flex justify-between items-center pr-8 pl-8">
@@ -18,9 +21,13 @@ function Navbar() {
           </li>
           <li className="flex items-center gap-2">
             <Link href="/carts">Cart</Link>
-            <span className="w-5 h-5 rounded-full bg-bg-page text-text-primary text-center text-sm">
-              3
-            </span>
+            {carts.length > 0 ? (
+              <span className="w-5 h-5 rounded-full bg-bg-page text-text-primary text-center text-sm">
+                {totlaItems}
+              </span>
+            ) : (
+              ""
+            )}
           </li>
         </ul>
       </nav>

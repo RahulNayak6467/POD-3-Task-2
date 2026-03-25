@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { useCart } from "../Context/CartsContext";
 
 function PaymentCard() {
@@ -6,6 +8,8 @@ function PaymentCard() {
   const totalAmount = carts.reduce((acc, el) => acc + el.price * el.qty, 0);
   const taxPercentageAmount = (totalAmount * 8) / 100;
   const totalTaxAmount = totalAmount + taxPercentageAmount;
+
+  const router = useRouter();
 
   return (
     <div className="mt-4 px-8 py-8 border-2 ml-4 border-border-medium rounded-2xl bg-bg-section w-[400px] h-fit">
@@ -35,10 +39,16 @@ function PaymentCard() {
         </span>
       </div>
       <div className="mt-2 flex flex-col gap-2">
-        <button className="mt-4 bg-[#111111] text-white rounded-2xl border border-[#111111] font-bold py-2 text-center hover:bg-[#333333] transition-colors cursor-pointer">
+        <button
+          onClick={() => router.push("/Checkout")}
+          className="mt-4 bg-[#111111] text-white rounded-2xl border border-[#111111] font-bold py-2 text-center hover:bg-[#333333] transition-colors cursor-pointer"
+        >
           Proceed to checkout
         </button>
-        <button className="mt-4 bg-white text-[#111111] rounded-2xl border border-[#D3D1C7] font-bold py-2 text-center hover:bg-[#F1EFE8] transition-colors cursor-pointer">
+        <button
+          onClick={() => router.push("/categories")}
+          className="mt-4 bg-white text-[#111111] rounded-2xl border border-[#D3D1C7] font-bold py-2 text-center hover:bg-[#F1EFE8] transition-colors cursor-pointer"
+        >
           Continue shopping
         </button>
       </div>
